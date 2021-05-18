@@ -1,0 +1,47 @@
+@import "../../style/colours";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color-black;
+  text-align: center;
+}
+.subheading {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $color-black;
+  & a {
+    text-decoration: none;
+    color: $color-green;
+  }
+}
+
+.signup_button {
+  margin: 30px 0;
+  font-size: 1.6rem;
+  color: $color-white;
+  font-weight: 400;
+  border: none;
+  background-color: $color-green;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 1px 15px grey;
+  }
+}

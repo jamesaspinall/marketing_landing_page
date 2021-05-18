@@ -1,0 +1,31 @@
+@import "../../style/colours";
+.footer {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  background-color: #334d6e;
+  padding: 30px;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.title {
+  font-weight: 600;
+}
+.copyright {
+  font-weight: 200;
+}
+
+.socials {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  & .icon {
+    margin: 0 5px;
+    &:hover {
+      color: $color-green;
+    }
+  }
+}

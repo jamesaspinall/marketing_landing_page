@@ -1,0 +1,51 @@
+@import "../../style/colours";
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  //flex: 1 1 340px; /*  Stretching: */
+  flex: 0 1 340px; /*  No stretching: */
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: $color-black;
+  box-shadow: 1px 1px 5px lightslategrey;
+  margin: 10px;
+  & .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-black;
+  }
+  & .description {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: $color-black;
+  }
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    transition: all 0.3s ease-in;
+    box-shadow: 1px 1px 15px grey;
+  }
+}
+
+.heading {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-black;
+}
+.subheading {
+  padding: 50px;
+  font-size: 1.4rem;
+  color: $color-black;
+}

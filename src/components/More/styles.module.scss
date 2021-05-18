@@ -1,0 +1,189 @@
+@import "../../style/constants";
+@import "../../style/colours";
+@import "../../style/mixins";
+@import "../../style/colours";
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // min-height: 100vh;
+  background: $color-green;
+  background: linear-gradient(
+    8deg,
+    rgb(82, 192, 166) 0%,
+    rgb(71, 165, 143) 100%
+  );
+  clip-path: polygon(0 5%, 100% 0, 100% 90%, 0% 100%);
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include respond-to("small") {
+    flex-direction: row;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  // background: $color-green;
+  // background: linear-gradient(
+  //   8deg,
+  //   rgb(82, 192, 166) 0%,
+  //   rgb(71, 165, 143) 100%
+  // );
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.title_container {
+  color: $color-black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.testimonial_main_container_dark {
+  height: 280px;
+  width: 340px;
+  background-color: $color-dark;
+  border-radius: 10px;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 10px 10px 50px 10px;
+  & .testimonial_avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    bottom: -50px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/westspray.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.testimonial_main_container_light_left {
+  height: 280px;
+  width: 350px;
+  background-color: $color-light;
+  border-radius: 10px;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 10px 10px 50px 10px;
+  @include respond-to("small") {
+    margin: 100px -25px 50px 10px;
+  }
+  & .testimonial_avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    bottom: -50px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/kiewapark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.testimonial_main_container_light_right {
+  height: 280px;
+  width: 350px;
+  background-color: $color-light;
+  border-radius: 10px;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 10px 10px 50px 10px;
+  @include respond-to("small") {
+    margin: 100px 10px 50px -25px;
+  }
+  z-index: -99;
+  & .testimonial_avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    bottom: -50px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/excelfarms.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.testimonial_icon_light {
+  text-align: center;
+  font-size: 3rem;
+  color: $color-light;
+  // margin-top: 10px;
+}
+.testimonial_icon_dark {
+  text-align: center;
+  font-size: 3rem;
+  color: $color-dark;
+  //margin-top: 10px;
+}
+.testimonial_quote {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: $color-white;
+  padding: 10px;
+}
+
+.cta_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.test_cta {
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 30px 10px;
+  text-decoration: none;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  transition: color 0.5s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    color: $color-dark;
+  }
+}
+
+.subtext {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  & span {
+    color: $color-green;
+  }
+}
+
+// .testimonial_avatar {
+//   position: absolute;
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 100%;
+//   bottom: -50px;
+//   margin: auto;
+//   left: 0;
+//   right: 0;
+//   background-image: url("../../images/hero.webp");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
